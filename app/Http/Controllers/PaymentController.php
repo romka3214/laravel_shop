@@ -79,6 +79,7 @@ class PaymentController extends Controller
             ->get();
      
                 Mail::to($email)->send(new OrderMail($items, $order));
+                //гит работает? я думаю да
 
             return response()->json(['success' => $r -> comment]);
         } else {
